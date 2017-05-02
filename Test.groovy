@@ -22,7 +22,7 @@ env.GIT_URL = 'https://github.com/root-project/root.git'
 currentBuild.setDisplayName("#$BUILD_NUMBER ")
 currentBuild.setDescription("$BUILD_DESCRIPTION")
 
-node('master') {
+node('slc6') {
     timestamps {
         stage('Checkout') {
             dir('root') {
