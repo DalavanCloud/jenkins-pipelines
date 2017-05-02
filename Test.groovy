@@ -57,7 +57,7 @@ node('master') {
                         testTimeMargin: '3000', thresholdMode: 1, thresholds: testThreshold, 
                         tools: [[$class: 'CTestType', 
                                 deleteOutputFiles: true, failIfNotNew: false, pattern: 'build/Testing/*/Test.xml', 
-                                skipNoTestFiles: true, stopProcessingIfError: true]]])
+                                skipNoTestFiles: false, stopProcessingIfError: true]]])
                 
                 if (currentBuild.result == 'FAILURE') {
                     throw new Exception("Test result caused build to fail")
